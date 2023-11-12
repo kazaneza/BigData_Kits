@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <form action="{% url 'results' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="temperature">Temperature</label>
+        <input type="number" step="any" id="temperature" name="temperature"><br>
+        <label for="parasite_density">parasite_density</label>
+        <input type="number" step="any" id="parasite_density" name="parasite_density"><br>
+        <label for="wbc_count">wbc_count</label>
+        <input type="number" step="any" id="wbc_count" name="wbc_count"><br>
+        <label for="hb_level">hb_level</label>
+        <input type="number" step="any" id="hb_level" name="hb_level"><br>
+        <label for="hematocrit">hematocrit</label>
+        <input type="number" step="any" id="hematocrit" name="hematocrit"><br>
+        <label for="mean_cell_volume">mean_cell_volume</label>
+        <input type="number" step="any" id="mean_cell_volume" name="mean_cell_volume"><br>
+        <label for="mean_corp_hb">mean_corp_hb</label>
+        <input type="number" step="any" id="mean_corp_hb" name="mean_corp_hb"><br>
+        <label for="mean_cell_hb_conc">mean_cell_hb_conc</label>
+        <input type="number" step="any" id="mean_cell_hb_conc" name="mean_cell_hb_conc"><br>
+        <label for="platelet_count">platelet_count</label>
+        <input type="number" step="any" id="platelet_count" name="platelet_count"><br>
+        <label for="platelet_distr_width">platelet_distr_width</label>
+        <input type="number" step="any" id="platelet_distr_width" name="platelet_distr_width"><br>
+        <label for="mean_platelet_vl">mean_platelet_vl</label>
+        <input type="number" step="any" id="mean_platelet_vl" name="mean_platelet_vl"><br>
+        <label for="neutrophils_percent">neutrophils_percent</label>
+        <input type="number" step="any" id="neutrophils_percent" name="neutrophils_percent"><br>
+        <label for="lymphocytes_percent">lymphocytes_percent</label>
+        <input type="number" step="any" id="lymphocytes_percent" name="lymphocytes_percent"><br>
+        <label for="mixed_cells_percent">mixed_cells_percent</label>
+        <input type="mixed_cells_percent" step="any" id="mixed_cells_percent" name="mixed_cells_percent"><br>
+        <label for="neutrophils_count">neutrophils_count</label>
+        <input type="number" step="any" id="neutrophils_count" name="neutrophils_count"><br>
+        <label for="lymphocytes_count">lymphocytes_count</label>
+        <input type="number" step="any" id="lymphocytes_count" name="lymphocytes_count"><br>
+        <label for="mixed_cells_count">mixed_cells_count</label>
+        <input type="number" step="any" id="mixed_cells_count" name="mixed_cells_count"><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
